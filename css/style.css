@@ -451,3 +451,9 @@ header #logo {
 .pc {display:none;}
 
 }
+
+/* もくじ */
+.page-contents{
+list-style:none; /* 冒頭の数字が不要なので消す */
+padding-left:5px; /* 左側の余白を5pxに調整 */
+}
