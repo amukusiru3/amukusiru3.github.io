@@ -1,1 +1,146 @@
-a
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Nationmc!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="***">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/openclose.js"></script>
+<script src="/js/fixmenu_pagetop.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel=”apple-touch-icon” href=”/images/apple-touch-icon.png” sizes=”180×180″>
+<link rel=”icon” type=”image/x-icon” href=”/images/favicon.ico”>
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<h1 id="logo"><a href="/"><img src="/images/logo.png" alt="logo"></a></h1>
+</header>
+
+<!--開閉メニュー-->
+<nav id="menubar">
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="about">About</a></li>
+<li><a href="wiki/">Wiki</a></li>
+<li><a href="contact">Contact</a></li>
+</ul>
+</nav>
+
+<div id="contents">
+
+<section>
+
+<h2>command<br><span>～マイクラサーバー内で使えるコマンド～</span></h2>
+<h3>towny(/t,/n)</h3>
+<p>・街作成(2000)：/t new 町名<br>
+  ・国作成(15000)：/n new 国名<br>
+  ・街へ参加(招待されていない場合はできません)：/t join 町名<br>
+  ・街の情報を確認(街に参加している場合)：/t
+  ・国の情報を確認(国に参加している場合)：/n
+  ・街のスポーン地点へテレポート：/t spwan<br>
+  ・国のスポーン地点へテレポート：/n spawn<br>
+  ・町長の変更：/t set mayor 名前
+  ・国王の変更：/n set king 名前
+  ・町名の変更：/n set name 町名
+  ・国名の変更：/n set name 国名
+  ・街の銀行に入金する：/t deposit 値段<br>
+  ・国の銀行に入金する：/n deposit 値段<br>
+  ・街の銀行から出金する：/t withdraw 値段<br>
+  ・国の銀行から出金する：/n withdraw 値段<br>
+  ・今いるチャンク(土地,16✕16)を500で街の領土にする：/t claim<br>
+  ・常時、いるチャンクを街の領土にする：/res toggle townclaim on/off
+  ・今いるチャンク(土地,16✕16)を街の領土を手放す：/t unclaim<br>
+  ・取得できるチャンク上限を上げる(街の人数によって上限が変わるので無効です)：/t buy bonus 値段<br>
+  ・街を削除する：/t delete 町名<br>
+  ・国を削除する：/n delete 国名<br>
+  ・街の領土内での権限を変更する(build:設置、destroy:破壊、switch:ボタン,スイッチの使用、itemuse:エンダーパールなどのアイテム使用：<br>
+/t set perm build on/off<br>
+/t set perm destroy on/off<br>
+/t set perm switch on/off<br>
+/t set perm itemuse on/off<br>
+  ・街の権限を変更する：/t rank add/remove 名前 ランク名<br>
+  ・国の権限を変更する：/n rank add/remove 名前 ランク名<br>
+  ・街の住民の権限を表示する：/t ranklist<br>
+  ・国の住民の権限を表示する：/n ranklist<br>
+  ・trust権限(土地の権限関係なく設置等ができる権限)を与える(住民でなくても可)：/t trust 名前<br>
+  ・街の領土内での設定を変更する(explosion:爆発による破壊、fire:火の延焼,mobs:敵対mobのスポーン,pvp:プレーヤーへの攻撃)<br>
+/t toggle explosion on/off(on/off関係なく爆破による破壊はロールバックされます)<br>
+/t toggle fire<br>
+/t toggle mobs<br>
+/t toggle pvp<br>
+  ・国への所属を街へ招待/除外する：/n add/kick 町名
+  ・同盟の申請/解除：/n ally add/remove 国名
+  ・指定した国のスポーン地点にテレポートする：/n spawn 国名
+  ・敵対関係の登録/解除：/n enemy add/remove 国名
+  ・中立国になる：/n toggle neutral on/off
+  ・国の首都を変更する：/n set capital 町名
+  ・指定した国民に称号を付ける：/n set surname 名前 称号
+</p>
+<h3>towny(/plot)</h3>
+<p>・今いるチャンクを売る(街の領土内)：/plot fs 値段<br>
+  ・今いるチャンクの販売を中止する：/plot nfs<br>
+  ・売られているチャンクを買う：/plot claim<br>
+  ・チャンクの情報を確認する：/plot perm<br>
+  ・チャンクの権限を変更する(resident:街の住民、ally:同盟国の住人、outsider:その他全員)<br>(build:設置、destroy:破壊、switch:ボタン,スイッチの使用、itemuse:エンダーパールなどのアイテム使用)：<br>
+  /plot set perm 立場 権限 on/off<br>
+  例(outsiderから全ての権限を剥奪)：/plot set perm outsider off<br>
+  ・チャンクをアリーナにする(プレーヤーへの攻撃ができる)：/plot set arena<br>
+  ・チャンクの設定を変更する(explosion:爆発による破壊、fire:火の延焼,mobs:敵対mobのスポーン,pvp:プレーヤーへの攻撃)<br>
+/plot toggle explosion on/off(on/off関係なく爆破による破壊はロールバックされます)<br>
+/plot toggle fire<br>
+/plot toggle mobs<br>
+/plot toggle pvp<br>
+</p>
+<h3>towny(/res)</h3>
+<p>・プレーヤーの情報を見る：/res 名前<br>
+  ・フレンドリストに追加する(相手の友達リストには入らない)：/res friend add/remove 名前<br>
+  ・フレンドリストを見る：/resident friend list<br>
+  ・自身が所有する土地(plot)全ての権限を設定する(friend:フレンド、resident:街の住民、ally:同盟国の住人、outsider:その他全員)<br>(build:設置、destroy:破壊、switch:ボタン,スイッチの使用、itemuse:エンダーパールなどのアイテム使用)：<br>
+/res set perm 立場 権限 on/off<br>
+  ・コマンドヘルプ：/t ?<br>
+その他：<span class="pr"><a href="https://www.seichi.network/townycommand" target="_blank">こちらのサイトがまとまっています。</a></span>
+</p>
+
+</section>
+
+</div>
+
+<!--/#contents-->
+
+<footer>
+<ul class="icon">
+<li><a href="https://discord.gg/8GuANVJH"><img src="/images_photo/discord.png" alt="discord"></a></li>
+<li><a href="https://www.youtube.com/channel/UCq1RfM6fyTYgeKoU6kClAcw/featured"><img src="/images/icon_youtube.png" alt="TouTube"></a></li>
+</ul>
+<small>Copyright&copy; <a href="/">nationmc</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+</footer>
+
+</div>
+<!--/#container-->
+
+<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
+<!--メニュー開閉ボタン-->
+<div id="menubar_hdr" class="close"></div>
+
+<!--メニューの開閉処理-->
+<script>
+open_close("menubar_hdr", "menubar");
+</script>
+
+<!--lightbox用jsファイルの読み込み-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.min.js"></script>
+
+</body>
+</html>
