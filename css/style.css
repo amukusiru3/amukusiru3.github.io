@@ -460,16 +460,3 @@ padding-left:5px; /* 左側の余白を5pxで調整する */
 .page-contents p{
 text-decoration:none; /* 装飾(下線)を消す */
 }
-
-#box{
-  width: 300px;
-  height: 170px;
-  padding: 20px;
-  border: 1px solid gray;
-  background-color:   rgb(210, 232, 247); 
-  box-sizing: border-box;
-}
-#box li{
-  margin-top: 2px;
-  margin-left: 50px;
-}
